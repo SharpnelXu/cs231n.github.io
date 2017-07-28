@@ -71,7 +71,8 @@ class KNearestNeighbor(object):
         # training point, and store the result in dists[i, j]. You should   #
         # not use a loop over dimension.                                    #
         #####################################################################
-        pass
+        diff = np.subtract(X, self.X_train)
+	dist[i][j] = np.sqrt(np.multiply(diff, diff))
         #####################################################################
         #                       END OF YOUR CODE                            #
         #####################################################################
